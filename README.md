@@ -39,5 +39,5 @@ public class ExampleApp extends Application<ExampleConfig> {
 
 ```
 
-Template files must to be in same package (+ prefix) as the view class, whenever View name does not start with an "/".
+Template files must be in same package (+ prefix) as the view class, whenever View name does not start with an "/".
 ![alt tag](.github/project.png)
