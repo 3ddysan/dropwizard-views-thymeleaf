@@ -1,0 +1,33 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "1.2.3"
+}
+
+ext {
+    mainClass = 'edu.thinktank.thymeleaf.example.ExampleApp'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+dependencies {
+    compile "io.dropwizard:dropwizard-core:${rootProject.dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-views:${rootProject.dropwizardVersion}"
+    compile rootProject
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class':  mainClass
+    }
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
+task run(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = mainClass
+    args 'server', 'example.yml'
+    standardOutput = System.out
+    errorOutput = System.err
+}

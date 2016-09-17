@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Hello Thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<p>
+    Today is: <span th:with="df=#{date.format}" th:text="${#calendars.format(today,df)}">13 February 2016</span>
+</p>
+<p>Now you are looking at a <span th:text="'working web application'">template file</span>.</p>
+
+<p th:each="sentence : ${sentences}"
+   th:text="${sentence}">template placeholder text</p>
+
+<div th:include="~{footer::copy}">&copy; 2016 Footer Text</div>
+
+</body>
+
+</html>

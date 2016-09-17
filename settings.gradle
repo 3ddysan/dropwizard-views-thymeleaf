@@ -1,0 +1,3 @@
+rootProject.name = 'dropwizard-views-thymeleaf'
+include 'example'
+
