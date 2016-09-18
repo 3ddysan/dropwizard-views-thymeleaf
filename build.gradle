@@ -1,3 +1,5 @@
+apply plugin: 'maven'
+
 allprojects {
     group 'edu.thinktank.thymeleaf'
     version '0.1-SNAPSHOT'
@@ -26,4 +28,21 @@ dependencies {
     compile "org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.0.RELEASE"
     testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.23.2"
+}
+
+task pom << {
+    pom {
+        project {
+            inceptionYear Calendar.instance[Calendar.YEAR]
+            name 'Dropwizard Thymeleaf Views'
+            url 'https://github.com/3ddysan/dropwizard-views-thymeleaf'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
 }
