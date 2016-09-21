@@ -26,6 +26,7 @@ dependencies {
     compile "io.dropwizard:dropwizard-views:${dropwizardVersion}"
     compile "org.thymeleaf:thymeleaf:${thymeleafVersion}"
     compile "org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.0.RELEASE"
+    testCompile "junit:junit:$junitVersion"
     testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.23.2"
 }
