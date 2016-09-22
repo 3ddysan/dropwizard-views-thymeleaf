@@ -30,7 +30,7 @@ public class ClassResourceTemplateResolverTest {
     public void computeFragmentRelativeToOwnerResource() throws Exception {
         final ClassResourceTemplateResolver resolver = new ClassResourceTemplateResolver();
         final String filepath = "/relative.html";
-        final String ownerPath = "/edu/thinktank/thymeleaf";
+        final String ownerPath = "/edu/thinktank/thymeleaf/views";
         final String ownerTemplate = ownerPath + "/example";
 
         final ITemplateResource resource = resolver.computeTemplateResource(null, ownerTemplate, "/relative", filepath, null, null);
