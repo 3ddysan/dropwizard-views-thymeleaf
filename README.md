@@ -1,5 +1,5 @@
 # dropwizard-views-thymeleaf
-Thymeleaf 3 for Dropwizard 1.0.0
+Thymeleaf 3 for Dropwizard 1.0.2
 
 [![Build Status](https://travis-ci.org/3ddysan/dropwizard-views-thymeleaf.svg?branch=master)](https://travis-ci.org/3ddysan/dropwizard-views-thymeleaf)
 
